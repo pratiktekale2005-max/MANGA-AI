@@ -1,0 +1,255 @@
+{
+  "pipeline_status": "SUCCESS",
+  "models_trained": [
+    "Manganese Grade Predictor (Random Forest / Gradient Boosting)",
+    "Spatial Estimator (IDW, Kriging, ML)",
+    "3D Block Model Reserve Engine",
+    "Exploration Target Prioritizer",
+    "Production Time-Series Forecaster",
+    "Equipment Health & Reliability Analyzer",
+    "Isolation Forest Anomaly Detector",
+    "Composite Mining Risk Engine",
+    "Constrained Extraction Optimizer",
+    "What-If Scenario Simulator",
+    "AI Actionable Recommendation Engine"
+  ],
+  "grade_model": {
+    "model_name": "Manganese Grade Predictor",
+    "best_algorithm": "Ridge Regressor",
+    "training_samples": 1825,
+    "test_r2": 0.9247,
+    "test_rmse": 3.464,
+    "test_mae": 2.789,
+    "categorical_features": [
+      "lithology"
+    ],
+    "numerical_features": [
+      "x",
+      "y",
+      "sample_depth",
+      "collar_elevation",
+      "density",
+      "sat_iron_oxide",
+      "sat_clay_index",
+      "fe_grade",
+      "sio2"
+    ],
+    "feature_names": [
+      "lithology_Banded Hematite-Manganese Quartzite",
+      "lithology_Calc-Silicate Granulite",
+      "lithology_Gondite (Manganiferous Quartzite)",
+      "lithology_High-Grade Braunite Ore",
+      "lithology_Medium-Grade Pyrolusite Bed",
+      "lithology_Phyllite & Weathered Overburden",
+      "lithology_Quartz-Muscovite Schist",
+      "x",
+      "y",
+      "sample_depth",
+      "collar_elevation",
+      "density",
+      "sat_iron_oxide",
+      "sat_clay_index",
+      "fe_grade",
+      "sio2"
+    ],
+    "feature_importances": {
+      "lithology_High-Grade Braunite Ore": 0.2042,
+      "lithology_Medium-Grade Pyrolusite Bed": 0.197,
+      "lithology_Phyllite & Weathered Overburden": 0.1745,
+      "lithology_Calc-Silicate Granulite": 0.1591,
+      "lithology_Quartz-Muscovite Schist": 0.1549,
+      "lithology_Gondite (Manganiferous Quartzite)": 0.045,
+      "lithology_Banded Hematite-Manganese Quartzite": 0.0423,
+      "fe_grade": 0.0051,
+      "sat_iron_oxide": 0.0044,
+      "sio2": 0.0043,
+      "density": 0.0033,
+      "collar_elevation": 0.0022,
+      "x": 0.0018,
+      "y": 0.0009,
+      "sample_depth": 0.0007,
+      "sat_clay_index": 0.0003
+    },
+    "model_path": "D:\\My Data\\Desktop\\MANGAAI\\ml\\model_registry\\grade_predictor.joblib",
+    "comparison": [
+      {
+        "algorithm": "Random Forest Regressor",
+        "r2_score": 0.9207,
+        "rmse": 3.553,
+        "mae": 2.835,
+        "cv_r2_mean": 0.9214,
+        "cv_rmse_mean": 3.475,
+        "is_best": false
+      },
+      {
+        "algorithm": "Gradient Boosting Regressor",
+        "r2_score": 0.9133,
+        "rmse": 3.715,
+        "mae": 2.938,
+        "cv_r2_mean": 0.914,
+        "cv_rmse_mean": 3.635,
+        "is_best": false
+      },
+      {
+        "algorithm": "Extra Trees Regressor",
+        "r2_score": 0.9216,
+        "rmse": 3.534,
+        "mae": 2.812,
+        "cv_r2_mean": 0.92,
+        "cv_rmse_mean": 3.505,
+        "is_best": false
+      },
+      {
+        "algorithm": "Ridge Regressor",
+        "r2_score": 0.9247,
+        "rmse": 3.464,
+        "mae": 2.789,
+        "cv_r2_mean": 0.9211,
+        "cv_rmse_mean": 3.48,
+        "is_best": true
+      }
+    ]
+  },
+  "spatial_comparison": {
+    "IDW (Inverse Distance Weighting)": {
+      "r2_score": 0.2676,
+      "rmse": 10.674,
+      "mae": 7.985,
+      "method_type": "Deterministic Distance Decay"
+    },
+    "Ordinary Kriging (Gaussian Process)": {
+      "r2_score": 0.3977,
+      "rmse": 9.68,
+      "mae": 7.353,
+      "method_type": "Geostatistical Variogram Optimization"
+    },
+    "ML Spatial Regressor": {
+      "r2_score": 0.2679,
+      "rmse": 10.672,
+      "mae": 7.981,
+      "method_type": "Nonlinear Neighborhood ML"
+    }
+  },
+  "production_model": {
+    "model_name": "Production Time-Series Forecaster",
+    "algorithm": "Gradient Boosting Regressor with Operational Lags",
+    "r2_score": 0.9055,
+    "rmse_tonnes": 3298.5,
+    "mae_tonnes": 2657.9,
+    "mape_pct": 11.36,
+    "feature_importances": {
+      "actual_mn_grade": 0.7921,
+      "rolling_3m_prod": 0.0759,
+      "fleet_availability_pct": 0.0578,
+      "operating_hours": 0.0254,
+      "lag_1_prod": 0.0135,
+      "working_days": 0.0134,
+      "lag_2_prod": 0.0082,
+      "month_cos": 0.0062,
+      "month_sin": 0.0041,
+      "fleet_utilization_pct": 0.0034
+    },
+    "training_samples": 144,
+    "model_path": "D:\\My Data\\Desktop\\MANGAAI\\ml\\model_registry\\production_forecaster.joblib"
+  },
+  "reserve_summary": {
+    "disclaimer": "AI-assisted estimated resource/reserve potential. This computation does not constitute a legally certified mineral reserve under statutory mining codes (e.g., UNFC/JORC/CRIRSCO) and must be verified by certified competent geological persons.",
+    "cutoff_grade_pct": 20.0,
+    "total_blocks_evaluated": 1936,
+    "ore_blocks_count": 1936,
+    "waste_blocks_count": 0,
+    "total_ore_tonnage_million_t": 997.92,
+    "recoverable_ore_tonnage_million_t": 848.232,
+    "average_ore_grade_pct": 26.51,
+    "contained_manganese_thousand_t": 264865.52,
+    "recoverable_manganese_thousand_t": 207124.84,
+    "stripping_ratio_waste_to_ore": 0.0,
+    "resource_classification": [
+      {
+        "category": "111 (Measured Resource)",
+        "blocks_count": 696,
+        "tonnage_million_t": 412.38,
+        "avg_grade_pct": 26.79,
+        "contained_mn_thousand_t": 110494.91
+      },
+      {
+        "category": "122 (Indicated Resource)",
+        "blocks_count": 616,
+        "tonnage_million_t": 318.78,
+        "avg_grade_pct": 26.51,
+        "contained_mn_thousand_t": 84521.26
+      },
+      {
+        "category": "333 (Inferred / Reconnaissance)",
+        "blocks_count": 624,
+        "tonnage_million_t": 266.76,
+        "avg_grade_pct": 26.18,
+        "contained_mn_thousand_t": 69849.35
+      }
+    ],
+    "model_confidence_score": 0.84
+  },
+  "risk_summary": {
+    "composite_risk_score": 62.5,
+    "risk_level": "High Risk",
+    "risk_explanation": "Substantial risk due to upcoming monsoon season, grade heterogeneity, and aging haul fleet.",
+    "pillars": [
+      {
+        "pillar": "Production Shortfall Risk",
+        "score": 27.9,
+        "weight_pct": 32,
+        "status": "Good",
+        "description": "Recent 6-month average production deficit is 1.8% against target."
+      },
+      {
+        "pillar": "Geological & Grade Uncertainty",
+        "score": 95.0,
+        "weight_pct": 28,
+        "status": "Warning",
+        "description": "Grade coefficient of variation is 0.80 across sampled borehole intervals."
+      },
+      {
+        "pillar": "Equipment Fleet Reliability",
+        "score": 95.0,
+        "weight_pct": 25,
+        "status": "Warning",
+        "description": "Average fleet health is 64.5% with 46 high-risk machines."
+      },
+      {
+        "pillar": "Data Quality & Spatial Coverage",
+        "score": 15.0,
+        "weight_pct": 10,
+        "status": "Good",
+        "description": "High data integrity and consistent assay reporting."
+      },
+      {
+        "pillar": "Environmental & Seasonal Factor",
+        "score": 35.0,
+        "weight_pct": 5,
+        "status": "Good",
+        "description": "Seasonal monsoon rainfall mitigation parameters active."
+      }
+    ],
+    "radar_metrics": {
+      "production_shortfall": 27.9,
+      "geological_uncertainty": 95.0,
+      "equipment_health": 95.0,
+      "data_quality": 15.0,
+      "environmental": 35.0
+    }
+  },
+  "optimization_summary": {
+    "status": "Constraint Warning: Sub-target or Low Grade",
+    "planning_period_months": 1,
+    "target_production_tonnes": 35000.0,
+    "equipment_handling_limit_tonnes": 45000.0,
+    "scheduled_production_tonnes": 40250.0,
+    "target_fulfillment_pct": 115.0,
+    "scheduled_contained_mn_tonnes": 10907.8,
+    "blended_mn_grade_pct": 27.1,
+    "min_required_grade_pct": 32.0,
+    "meets_grade_constraint": false,
+    "blocks_scheduled_count": 1
+  },
+  "recommendations_count": 5
+}

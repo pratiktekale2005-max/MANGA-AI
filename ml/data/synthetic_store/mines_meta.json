@@ -1,0 +1,61 @@
+{
+  "dataset_type": "Demo/Synthetic Dataset",
+  "mines": [
+    {
+      "mine_id": "MOIL-DB-01",
+      "name": "Dongri Buzurg Mine",
+      "type": "Open Cast & Underground",
+      "district": "Bhandara",
+      "state": "Maharashtra",
+      "center_lat": 21.5478,
+      "center_lon": 79.7042,
+      "base_elevation": 320.0,
+      "avg_mn_grade": 40.5,
+      "formation": "Mansar Formation (Sausar Group)",
+      "mineralogy": "Pyrolusite, Psilomelane, Braunite",
+      "monthly_capacity_tonnes": 35000
+    },
+    {
+      "mine_id": "MOIL-BL-03",
+      "name": "Balaghat Mine",
+      "type": "Deep Underground (Shaft)",
+      "district": "Balaghat",
+      "state": "Madhya Pradesh",
+      "center_lat": 21.8125,
+      "center_lon": 80.1856,
+      "base_elevation": 345.0,
+      "avg_mn_grade": 43.8,
+      "formation": "Mansar Formation (Gondite Belt)",
+      "mineralogy": "High-Grade Braunite, Holandite",
+      "monthly_capacity_tonnes": 48000
+    },
+    {
+      "mine_id": "MOIL-GM-02",
+      "name": "Gumgaon Mine",
+      "type": "Underground",
+      "district": "Nagpur",
+      "state": "Maharashtra",
+      "center_lat": 21.3912,
+      "center_lon": 78.9815,
+      "base_elevation": 310.0,
+      "avg_mn_grade": 36.2,
+      "formation": "Sitasaongi & Mansar Formations",
+      "mineralogy": "Braunite, Cryptomelane, Gondite Ore",
+      "monthly_capacity_tonnes": 24000
+    },
+    {
+      "mine_id": "MOIL-UK-04",
+      "name": "Ukwa Mine",
+      "type": "Underground & Open Slope",
+      "district": "Balaghat",
+      "state": "Madhya Pradesh",
+      "center_lat": 21.968,
+      "center_lon": 80.4632,
+      "base_elevation": 360.0,
+      "avg_mn_grade": 33.4,
+      "formation": "Chorbaoli / Mansar Transition",
+      "mineralogy": "Bedded Manganese Silicates & Braunite",
+      "monthly_capacity_tonnes": 20000
+    }
+  ]
+}

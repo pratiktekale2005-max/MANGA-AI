@@ -1,0 +1,22 @@
+{
+  "model_name": "Production Time-Series Forecaster",
+  "algorithm": "Gradient Boosting Regressor with Operational Lags",
+  "r2_score": 0.9055,
+  "rmse_tonnes": 3298.5,
+  "mae_tonnes": 2657.9,
+  "mape_pct": 11.36,
+  "feature_importances": {
+    "actual_mn_grade": 0.7921,
+    "rolling_3m_prod": 0.0759,
+    "fleet_availability_pct": 0.0578,
+    "operating_hours": 0.0254,
+    "lag_1_prod": 0.0135,
+    "working_days": 0.0134,
+    "lag_2_prod": 0.0082,
+    "month_cos": 0.0062,
+    "month_sin": 0.0041,
+    "fleet_utilization_pct": 0.0034
+  },
+  "training_samples": 144,
+  "model_path": "D:\\My Data\\Desktop\\MANGAAI\\ml\\model_registry\\production_forecaster.joblib"
+}

@@ -1,0 +1,97 @@
+{
+  "model_name": "Manganese Grade Predictor",
+  "best_algorithm": "Ridge Regressor",
+  "training_samples": 1825,
+  "test_r2": 0.9247,
+  "test_rmse": 3.464,
+  "test_mae": 2.789,
+  "categorical_features": [
+    "lithology"
+  ],
+  "numerical_features": [
+    "x",
+    "y",
+    "sample_depth",
+    "collar_elevation",
+    "density",
+    "sat_iron_oxide",
+    "sat_clay_index",
+    "fe_grade",
+    "sio2"
+  ],
+  "feature_names": [
+    "lithology_Banded Hematite-Manganese Quartzite",
+    "lithology_Calc-Silicate Granulite",
+    "lithology_Gondite (Manganiferous Quartzite)",
+    "lithology_High-Grade Braunite Ore",
+    "lithology_Medium-Grade Pyrolusite Bed",
+    "lithology_Phyllite & Weathered Overburden",
+    "lithology_Quartz-Muscovite Schist",
+    "x",
+    "y",
+    "sample_depth",
+    "collar_elevation",
+    "density",
+    "sat_iron_oxide",
+    "sat_clay_index",
+    "fe_grade",
+    "sio2"
+  ],
+  "feature_importances": {
+    "lithology_High-Grade Braunite Ore": 0.2042,
+    "lithology_Medium-Grade Pyrolusite Bed": 0.197,
+    "lithology_Phyllite & Weathered Overburden": 0.1745,
+    "lithology_Calc-Silicate Granulite": 0.1591,
+    "lithology_Quartz-Muscovite Schist": 0.1549,
+    "lithology_Gondite (Manganiferous Quartzite)": 0.045,
+    "lithology_Banded Hematite-Manganese Quartzite": 0.0423,
+    "fe_grade": 0.0051,
+    "sat_iron_oxide": 0.0044,
+    "sio2": 0.0043,
+    "density": 0.0033,
+    "collar_elevation": 0.0022,
+    "x": 0.0018,
+    "y": 0.0009,
+    "sample_depth": 0.0007,
+    "sat_clay_index": 0.0003
+  },
+  "model_path": "D:\\My Data\\Desktop\\MANGAAI\\ml\\model_registry\\grade_predictor.joblib",
+  "comparison": [
+    {
+      "algorithm": "Random Forest Regressor",
+      "r2_score": 0.9207,
+      "rmse": 3.553,
+      "mae": 2.835,
+      "cv_r2_mean": 0.9214,
+      "cv_rmse_mean": 3.475,
+      "is_best": false
+    },
+    {
+      "algorithm": "Gradient Boosting Regressor",
+      "r2_score": 0.9133,
+      "rmse": 3.715,
+      "mae": 2.938,
+      "cv_r2_mean": 0.914,
+      "cv_rmse_mean": 3.635,
+      "is_best": false
+    },
+    {
+      "algorithm": "Extra Trees Regressor",
+      "r2_score": 0.9216,
+      "rmse": 3.534,
+      "mae": 2.812,
+      "cv_r2_mean": 0.92,
+      "cv_rmse_mean": 3.505,
+      "is_best": false
+    },
+    {
+      "algorithm": "Ridge Regressor",
+      "r2_score": 0.9247,
+      "rmse": 3.464,
+      "mae": 2.789,
+      "cv_r2_mean": 0.9211,
+      "cv_rmse_mean": 3.48,
+      "is_best": true
+    }
+  ]
+}
